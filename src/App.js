@@ -8,13 +8,29 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Preferences from './components/Preferences/Preferences';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Login from './components/Login/Login';
+import useToken from './components/App/useToken';
+
+
+// function setToken(userToken){
+//     console.log("userToken: ", userToken)
+//     sessionStorage.setItem( "token", JSON.stringify(userToken) )
+// }
+
+// function getToken(){
+//     const tokenString = sessionStorage.getItem("token")
+//     const userToken = JSON.parse(tokenString)
+//     console.log("gettoken: ", userToken, userToken?.token)
+//     return userToken?.token
+// }
 
 function App() {
 
     // const [username, setUsername] = useState("")
     // const [password, setPassword] = useState("")
 
-    const [token, setToken] = useState()
+    // const [token, setToken] = useState()
+    // const token = getToken()
+    const {token, setToken} = useToken()
 
     if (!token){
         console.log("inside token: ", token)
