@@ -4,6 +4,9 @@ import { useState } from 'react';
 
 import MyLogin from './MyLogin';
 
+import Dashboard from './components/Dashboard/Dashboard';
+import Preferences from './components/Preferences/Preferences';
+
 
 function App() {
 
@@ -13,25 +16,14 @@ function App() {
     return (
         <div className="App">
         <header className="App-header">
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            {/* <p>
-            Edit <code>src/App.js</code> and save to reload.
-            </p> */}
-            {/* <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-            </a> */}
+
             <div>
-            <MyLogin
-                username={username}
-                setUsername={setUsername}
-                password={password}
-                setPassword={setPassword}
-            />
+                <MyLogin
+                    username={username}
+                    setUsername={setUsername}
+                    password={password}
+                    setPassword={setPassword}
+                />
 
             </div>
         </header>
