@@ -11,14 +11,17 @@ import Login from './components/Login/Login';
 
 function App() {
 
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
+    // const [username, setUsername] = useState("")
+    // const [password, setPassword] = useState("")
 
     const [token, setToken] = useState()
 
     if (!token){
+        console.log("inside token: ", token)
         return <Login setToken={ setToken } />
     }
+    
+    console.log("outside token: ", token)
 
     return (
         <div className="App">
